@@ -1,7 +1,5 @@
 <?php
 
-require 'functions.php';
-
 $greeting = 'Hello, world';
 
 //array
@@ -30,6 +28,48 @@ $tasks = [
 ];
 
 //functions
-permission(12);
+require 'functions.php';
+
+// class
+class Task {
+
+    protected $results;
+
+    public $description;
+    public $completed = false;
+
+    public function __construct($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * Define las tareas completas
+     *
+     * @return bool
+     */
+    public function setComplete()
+    {
+        return $this->completed = true;
+    }
+
+    /**
+     * Obtiene las tareas completas
+     *
+     * @return bool
+     */
+    public function getCompleted()
+    {
+        return $this->completed;
+    }
+}
+
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Finish my screencast'),
+    new Task('clean my room'),
+];
+$tasks[0]->setComplete();
+$tasks[1]->setComplete();
 
 require 'index.view.php';

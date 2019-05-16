@@ -22,18 +22,18 @@
     <div>
         <h3>arrays</h3>
         <ul>
-            <?php foreach ($names as $name) { ?>
+            <?php foreach ($names as $name) : ?>
                 <li><?php echo $name; ?></li>
-            <?php }?>
+            <?php endforeach;?>
         </ul>
     </div>
 
     <div>
         <h3>associative arrays</h3>
         <ul>
-            <?php foreach ($persons as $key => $person) { ?>
+            <?php foreach ($persons as $key => $person) : ?>
                 <li><?php echo $key. ' : '. $person; ?></li>
-            <?php }?>
+            <?php endforeach;?>
         </ul>
     </div>
 
@@ -49,7 +49,22 @@
 
     <div>
         <h3>functions</h3>
+        <p> <?php permission(12); ?> </p>
+    </div>
 
+    <div>
+        <h3>Classes</h3>
+        <ul>
+            <?php foreach ($tasks as $task) :?>
+                <li>
+                    <?php if ($task->completed) :?>
+                        <strike> <?php echo $task->description; ?></strike>
+                    <?php else: ?>
+                        <?php echo $task->description; ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
     </div>
 </body>
 </html>
