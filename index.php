@@ -1,5 +1,7 @@
 <?php
 
+$query = require 'bootstrap.php';
+
 $greeting = 'Hello, world';
 
 //array
@@ -42,10 +44,7 @@ $tasks[0]->setComplete();
 $tasks[1]->setComplete();
 
 // PDO
-require 'Todo.php';
+$todos = $query->selectAll('task');
 
-$pdo = connectToDb();
-
-$todos = fetchAllTodos($pdo);
 
 require 'index.view.php';
