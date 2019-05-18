@@ -40,10 +40,10 @@
     <div>
         <h3>booleans</h3>
         <ul>
-            <li><?php echo $tasks['title']; ?></li>
-            <li><?php echo $tasks['due']; ?></li>
-            <li><?php echo $tasks['assigned']; ?></li>
-            <li><?php echo $tasks['completed'] ? 'complete' : 'Incomplete'; ?></li>
+            <li><?php echo $l_tasks['title']; ?></li>
+            <li><?php echo $l_tasks['due']; ?></li>
+            <li><?php echo $l_tasks['assigned']; ?></li>
+            <li><?php echo $l_tasks['completed'] ? 'complete' : 'Incomplete'; ?></li>
         </ul>
     </div>
 
@@ -61,6 +61,21 @@
                         <strike> <?php echo $task->description; ?></strike>
                     <?php else: ?>
                         <?php echo $task->description; ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+
+    <div>
+        <h3>PDO</h3>
+        <ul>
+            <?php foreach ($todos as $todo) :?>
+                <li>
+                    <?php if ($todo->completed) :?>
+                        <strike> <?php echo $todo->description; ?></strike>
+                    <?php else: ?>
+                        <?php echo $todo->description; ?>
                     <?php endif; ?>
                 </li>
             <?php endforeach ?>

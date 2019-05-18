@@ -20,7 +20,7 @@ $persons = [
 ];
 
 // Booleans
-$tasks = [
+$l_tasks = [
     'title' => 'homework',
     'due' => 'today',
     'assigned' => 'Armando',
@@ -31,38 +31,7 @@ $tasks = [
 require 'functions.php';
 
 // class
-class Task {
-
-    protected $results;
-
-    public $description;
-    public $completed = false;
-
-    public function __construct($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * Define las tareas completas
-     *
-     * @return bool
-     */
-    public function setComplete()
-    {
-        return $this->completed = true;
-    }
-
-    /**
-     * Obtiene las tareas completas
-     *
-     * @return bool
-     */
-    public function getCompleted()
-    {
-        return $this->completed;
-    }
-}
+require 'Task.php';
 
 $tasks = [
     new Task('Go to the store'),
@@ -71,5 +40,12 @@ $tasks = [
 ];
 $tasks[0]->setComplete();
 $tasks[1]->setComplete();
+
+// PDO
+require 'Todo.php';
+
+$pdo = connectToDb();
+
+$todos = fetchAllTodos($pdo);
 
 require 'index.view.php';
