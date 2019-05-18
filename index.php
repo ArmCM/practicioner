@@ -29,8 +29,8 @@ $l_tasks = [
     'completed' => true,
 ];
 
-//functions
-require 'functions.php';
+//helpers
+require 'helpers.php';
 
 // class
 require 'Task.php';
