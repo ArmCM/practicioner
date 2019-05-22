@@ -2,7 +2,10 @@
 
 class Router {
 
-    protected $routes = [];
+    protected $routes = [
+        'GET' => [],
+        'POST' => [],
+    ];
 
     public static function load($file)
     {
@@ -13,17 +16,25 @@ class Router {
         return $router;
     }
 
-    public function define($routes)
+    public function direct($uri, $requestType)
     {
-        $this->routes = $routes;
-    }
-
-    public function direct($uri)
-    {
-        if (array_key_exists($uri, $this->routes)) {
-            return $this->routes[$uri];
+        if (array_key_exists($uri, $this->routes[$requestType])) {
+            return $this->routes[$requestType][$uri];
         }
 
         throw new Exception('No route defined for this URI');
+    }
+
+    /**
+     *  verbs HTTP Router
+     */
+    public function get($uri, $controller)
+    {
+        $this->routes['GET'][$uri] = $controller;
+    }
+
+    public function post($uri, $controller)
+    {
+        $this->routes['POST'][$uri] = $controller;
     }
 }

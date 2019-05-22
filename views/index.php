@@ -14,5 +14,16 @@
     </style>
     <title>Document</title>
 </head>
-<body>
-<?php require 'nav.php'; ?>
+    <body>
+    <?php require 'partials/nav.php'; ?>
+        <div>
+            <h3>Forms</h3>
+
+            <form action="/names" method="POST">
+                <input name="name">
+
+                <button type="submit" value="Submit">submit</button>
+            </form>
+        </div>
+    </body>
+</html>

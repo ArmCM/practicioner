@@ -2,5 +2,5 @@
 
 $todos = $app['database']->selectAll('task');
 
-require 'views/index.view.php';
+require 'views/index.php';
 
