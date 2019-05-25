@@ -2,9 +2,10 @@
 
 //routes
 
-$router->get('', 'controllers/index.php');
-$router->get('about', 'controllers/about.php');
-$router->get('about-culture', 'controllers/about-culture.php');
-$router->get('contact', 'controllers/contact.php');
-$router->get('users', 'controllers/users.php');
-$router->post('names', 'controllers/list.php');
+$router->get('', 'PagesController@home');
+$router->get('about', 'PagesController@about');
+$router->get('users', 'PagesController@users');
+$router->get('contact', 'PagesController@contact');
+$router->get('about-culture', 'PagesController@aboutCulture');
+$router->get('alumni', 'AlumniController@index');
+$router->post('alumni', 'AlumniController@store');
