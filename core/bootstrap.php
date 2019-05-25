@@ -1,20 +1,16 @@
 <?php
 
-$app = [];
+/**
+ * asi asociamos lo que retorna config al container con el metodo bind
+ *
+ */
+App::bind('config', require 'config.php');
 
-$app['config'] = $config = require 'config.php';
 
-//antes de usar autoload
-//require 'core/Router.php';
-//
-//require 'core/Request.php';
-//
-//require 'core/database/Connection.php';
-//
-//require 'core/database/QueryBuilder.php';
-
-//
-
-$app['database'] = new QueryBuilder(
-    Connection::make($app['config']['database'])
-);
+/**
+ *  App::get('config') asi obtenemos las propiedades asignadas en la key config del contenedor
+ *
+ */
+App::bind('database', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));
