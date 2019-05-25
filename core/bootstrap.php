@@ -1,4 +1,5 @@
 <?php
+use App\Core\App;
 
 /**
  * asi asociamos lo que retorna config al container con el metodo bind
@@ -17,7 +18,7 @@ function view($name, $data = [])
 {
     extract($data);
 
-    return require "views/{$name}.php";
+    return require "app/views/{$name}.php";
 }
 
 function redirect($path)

@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controllers;
+
+use Task;
 
 class PagesController
 {
@@ -51,7 +54,6 @@ class PagesController
         ];
 
         //// class
-        require 'Task.php';
         require 'helpers/helpers.php';
 
         $tasks = [
