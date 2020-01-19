@@ -20,6 +20,15 @@ class Router {
         return $router;
     }
 
+    /**
+     * example.com/ about/culture
+     * asocia la url al controlador correspondiente
+     *
+     * @param $uri
+     * @param $requestType
+     * @return mixed
+     * @throws Exception
+     */
     public function direct($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {

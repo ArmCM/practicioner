@@ -2,6 +2,7 @@
 
 //routes
 
+/**@var  \App\Core\Router $router*/
 $router->get('', 'PagesController@home');
 $router->get('about', 'PagesController@about');
 $router->get('users', 'PagesController@users');
