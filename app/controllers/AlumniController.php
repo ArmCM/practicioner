@@ -8,7 +8,6 @@ class AlumniController
 {
     public function index()
     {
-
         $alumni = App::get('database')->selectAll('users');
 
         return view('alumni', compact('alumni'));
@@ -19,6 +18,9 @@ class AlumniController
         App::get('database')->insert('users', [
             'name' => $_POST['name']
         ]);
+
+
+        App::get('database')->selectWhere('users', ['']);
 
         return redirect('alumni');
     }

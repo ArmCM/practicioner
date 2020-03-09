@@ -20,12 +20,7 @@ class QueryBuilder
 
     public function insert($table, $parameters)
     {
-        $sql = sprintf(
-            'insert into %s (%s) values (%s)',
-            $table,
-            implode(', ', array_keys($parameters)),
-            ':' . implode(', :', array_keys($parameters))
-        );
+        $sql = sprintf('insert into %s (%s) values (%s)', $table, implode(', ', array_keys($parameters)), ':' . implode(', :', array_keys($parameters)));
 
         try {
             $statement = $this->pdo->prepare($sql);
@@ -34,5 +29,10 @@ class QueryBuilder
         } catch (Exception $e) {
             die('Whoops. something wet wrong');
         }
+    }
+
+    public function selectWhere($table, $parameters)
+    {
+
     }
 }

@@ -15,6 +15,7 @@ class ComposerStaticInit53614804aa7a2a1b585ebaf4c987ca37
         'ComposerAutoloaderInit53614804aa7a2a1b585ebaf4c987ca37' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit53614804aa7a2a1b585ebaf4c987ca37' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Task' => __DIR__ . '/../..' . '/app/Task.php',

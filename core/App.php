@@ -7,9 +7,9 @@ class App
     protected static $registry = [];
 
     /**
-     * Registra en el container valoes que le asignemos para
-     * obtenerlos desde cualquier parte de la aplicacion
-     * se definieron como staticos para que solo se pueda acceder directamente a la clase y no poder instancialos
+     * Registra en el container valores que le asignemos para
+     * obtenerlos desde cualquier parte de la aplicación
+     * se definieron como estíticos para que solo se pueda acceder directamente a la clase y no poder instanciados
      * desde el objeto global $this->
      *
      * @param $key
@@ -21,8 +21,6 @@ class App
     }
 
     /**
-     *
-     *
      * @param $key
      * @return mixed
      * @throws Exception

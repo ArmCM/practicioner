@@ -25,10 +25,8 @@ class PagesController
 
     public function users()
     {
-        ////variables
         $greeting = 'Hello, world';
 
-        ////array
         $names = [
             'armando',
             'carolina',
@@ -37,7 +35,6 @@ class PagesController
             'julio',
         ];
 
-        //// associative array
         $persons = [
             1 => 'one',
             'age' => 29,
@@ -45,7 +42,6 @@ class PagesController
             'career' => 'web developer',
         ];
 
-        //// Booleans
         $l_tasks = [
             'title' => 'homework',
             'due' => 'today',
@@ -53,7 +49,6 @@ class PagesController
             'completed' => true,
         ];
 
-        //// class
         require 'helpers/helpers.php';
 
         $tasks = [
@@ -61,6 +56,7 @@ class PagesController
             new Task('Finish my screencast'),
             new Task('clean my room'),
         ];
+
         $tasks[0]->setComplete();
         $tasks[1]->setComplete();
 

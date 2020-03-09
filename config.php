@@ -8,9 +8,9 @@ error_reporting(E_ALL);
 
 return [
     'database' => [
-        'name' => 'phpbeginners',
+        'name' => 'practicioner',
         'username' => 'root',
-        'password' => 'a0b0c0d0',
+        'password' => 'yourpassword',
         'connection' => 'mysql:host=127.0.0.1',
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

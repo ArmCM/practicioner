@@ -3,7 +3,7 @@
 use App\Core\App;
 
 /**
- * asi asociamos lo que retorna config al container con el metodo bind
+ * asi asociamos lo que retorna config al container con el método bind
  *
  */
 App::bind('config', require 'config.php');

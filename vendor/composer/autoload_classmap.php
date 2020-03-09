@@ -14,6 +14,7 @@ return array(
     'ComposerAutoloaderInit53614804aa7a2a1b585ebaf4c987ca37' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit53614804aa7a2a1b585ebaf4c987ca37' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Connection' => $baseDir . '/core/database/Connection.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Task' => $baseDir . '/app/Task.php',
